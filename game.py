@@ -2,8 +2,10 @@
 # Primeiro importamos a biblioteca, renomeamos e criamos as variaveis iniciais
 import random as rd
 numero_secreto = rd.randint(0,100)
-# de inicio vou criar um sistema de pontuação do qual será guardado o nome e o numero de tentativas do usuario
-score = None
+#importando uma biblioteca para trabalhar com matrizes de forma mais eficiente
+import pandas as pd 
+# de inicio vou criar um sistema de pontuação do qual será guardado o nome e o numero de tentativas do usuario, no caso em um arquivo xlsx (excel)
+score = pd.read_excel('score_game.xlsx')
 
 #Agora será criado um layout para se iniciar os trabalhos que irar funcionar dentro de um loop
 while True:
@@ -41,7 +43,7 @@ esse game consiste em acerta o numero definido pela maquina
             else:
                 print('Parabens meu caro, faça melhor da Próxima')
                 nome = input('digite seu playername: ')
-                score.append( nome,partida)
+                score = [] + partida, nome
                 break
     
 #Neste iremos trabalhar a segunda opção 'O score' onde iremos criar um contador que de ante mão foi colocado como variavel dentro da opção 1
