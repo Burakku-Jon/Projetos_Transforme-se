@@ -31,8 +31,17 @@ esse game consiste em acerta o numero definido pela maquina
 # colocando o sistema de sorteio do numero dentro do while para que ele se atualize toda vez que vier para tela inicial
     numero_secreto = rd.randint(0,100)
 
+#criando um sistema de erros neste caso se o usuario digitar algo diferente de um numero
+    try:    
+
 #agora vamos fazer os inputs para que a seleção seja possivel
-    opcao = int(input("digite sua escolha: "))
+        opcao = int(input("digite sua escolha: "))
+    except:
+        print(f'''
+Sua resposta foi invalida pois não foi digitado um numero
+             
+''')
+        opcao = int(input("digite sua escolha: "))
 
 #Agora chegou a hora de transformar essa resposta em ação, antes iremos criar uma variavél que ira contar a quantidade de partidas e também será usado para zerar a quantidade de partidas
     partida = 0
@@ -40,6 +49,30 @@ esse game consiste em acerta o numero definido pela maquina
 #Neste primeiro if referente a opção 1 ele fara o sistema do jogo onde ele ira comparar o numero secreto com o numero que o usuario propos, posteriormente também ira contar quantas vezes o jogador ja errou e quão proximo ele esta do numero seja para cima ou para baixo
 
     if opcao == 1:
+#um sistema de erro para que haja uma proteção de parada do código
+        try:        
+# agora será criada um sistema de niveis que irá facilitar ou dificultar o acerto do usuario
+            nivel = int(input("""
+selecione o nivel:
+1.fácil
+2.normal
+3.Dificil
+        
+"""))
+        except:
+            print('opição invalida jogo setado em normal-mode')
+        try:
+            if nivel == 1:
+                rd.randint(0,10)
+            elif nivel == 2:
+                rd.randint(0,100)
+            elif nivel == 3:
+                rd.randint(0,1000)
+            else:
+                print('opção invalida, o jogo será setado em normal')
+        except:
+            print('resposta invalida jogo setado no normal')
+
         while True:
             partida = partida +1
             print (f"rodada ({partida}), boa sorte")
