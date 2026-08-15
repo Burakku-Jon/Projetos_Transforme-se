@@ -11,8 +11,9 @@ body {
     align-items: center;
     min-height: 100vh;
     background: url('João Rodrigues – Fotógrafo.png') no-repeat;
-    background-size: cover;
     background-size: center;
+    background-position: center;
+    background-color: #000000;
 }
 
 header {
@@ -31,10 +32,9 @@ header {
 .title {
   color: #fff;
   font-style: open-sans;
-  width: 500px;
-  height: 100px;
   text-align: center;
   align-items: center;
+  flex-direction: 200px;
 }
 
 .logo {
@@ -88,7 +88,7 @@ header {
 
 .navigation .btnLogin-popup:hover {
     background: #fff;
-    color: #ff0000;
+    color: #000000;
 
 }
 
@@ -266,8 +266,6 @@ header {
 }
 
 .btn-desblock {
-    width: 200px;
-    height: 50px;
     background: transparent;
     border: 2px solid #fff;
     outline: none;
@@ -276,9 +274,12 @@ header {
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    margin-left: 40px;
     transition: .5s;
     font-size: 15px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 55px;
 }
 
 .tela-i {
@@ -288,6 +289,5 @@ header {
   align-items: space-around;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
