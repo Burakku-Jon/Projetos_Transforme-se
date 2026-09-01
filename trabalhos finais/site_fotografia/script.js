@@ -19,3 +19,29 @@ btnPopup.addEventListener('click', ()=> {
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove ('active-popup');
 });
+
+
+const form = document.getElementById('formCadastro');
+const mensagem = document.getElementById('mensagem');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita recarregar a página
+
+    const nome = document.getElementById('person').value;
+    const email = document.getElementById('email_register').value;
+    const senha = document.getElementById('password_register').value;
+
+    // Cria um objeto com os dados
+    const usuario = { nome, email, senha };
+
+    // Salva no localStorage do navegador convertendo para texto
+    localStorage.setItem('usuarioCadastrado', JSON.stringify(usuario));
+        mensagem.style.color = 'green';
+        mensagem.textContent = 'Cadastro realizado com sucesso!';
+
+    setTimeout(() => {
+        mensagem.textContent = ''
+    }, 3000);
+
+    form.reset(); // Limpa o formulário
+});

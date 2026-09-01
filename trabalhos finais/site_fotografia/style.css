@@ -181,7 +181,7 @@ header {
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: #162938;
+    color: #ffffff;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -199,7 +199,7 @@ header {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    color: #ffffff;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -208,13 +208,13 @@ header {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #162938;
+    color: #ffffff;
     line-height: 57px;
 }
 
 .remember-forgot {
     font-size: .9em;
-    color: #162938;
+    color: #fdfdfd;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -222,12 +222,12 @@ header {
 }
 
 .remember-forgot label input {
-    accent-color: #162938;
+    accent-color: #ffffff;
     margin-right: 3px;
 }
 
 .remember-forgot a {
-    color: #162938;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -238,7 +238,7 @@ header {
 .btn {
     width: 100%;
     height: 45px;
-    background: #0091ff;
+    background: #4d4d4d;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -270,17 +270,17 @@ header {
     background: transparent;
     border: 2px solid #fff;
     outline: none;
-    border-radius: 25px;
+    border-radius: 100%;
     cursor: pointer;
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
     transition: .5s;
     font-size: 15px;
-    width: 200px;
+    width: 15px;
     text-align: center;
-    margin: 0 auto;
-    padding: 15px 55px;
+    margin: 0px;
+    padding: 50px 50px;
 }
 
 .tela-i {
@@ -292,4 +292,9 @@ header {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#mensagem {
+  font-size: 14px;
+  align-items: center;
 }
