@@ -41,6 +41,7 @@ form.addEventListener('submit', function(event) {
 
     setTimeout(() => {
         mensagem.textContent = ''
+        wrapper.classList.remove('active');
     }, 3000);
 
     form.reset(); // Limpa o formulário
