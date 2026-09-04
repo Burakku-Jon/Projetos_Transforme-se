@@ -6,13 +6,8 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('João Rodrigues – Fotógrafo.png') no-repeat;
-    background-size: center;
-    background-position: center;
     background-color: #000000;
 }
 
@@ -292,9 +287,34 @@ header {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
+  background: url('João Rodrigues – Fotógrafo.png') no-repeat;
+  background-size: center;
+  background-position: center;
 }
 
 #mensagem {
   font-size: 14px;
   align-items: center;
+}
+
+/* Tela 2 */
+.tela2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  h1 {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+  p {
+    color: #fff;
+    font-size: 1em;
+    text-align: left;
+    margin: 300px;
+  }
 }
